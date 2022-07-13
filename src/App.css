@@ -1,0 +1,214 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100%;
+  width: 100%;
+  background: #555;
+}
+.App-container{
+  position: relative;
+  left: 220px;
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;;
+}
+.board-contaider{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.lostFigure{
+  display: flex;
+  position: relative;
+  left: 0px;
+  width: 560px;
+  height: 40px;
+  /* background-color: rgb(131, 131, 131); */
+  justify-content: left;
+  padding: 5px 10px;
+  align-items: center;
+}
+.lostFigure div{
+  display: flex;
+}
+
+.numberbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numberbar._X{
+  width: calc(70px*8);
+  height: 20px;
+}
+.numberbar._X span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #bbb;
+}
+.numberbar._Y{
+  position: absolute;
+  height: calc(70px*8);
+  left: -22.5px;
+  top: 41.5px;
+  width: 20px;
+  flex-direction: column-reverse;
+}
+.numberbar._Y span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #bbb;
+}
+.board{
+  max-width: calc(70px*8);
+  max-height: calc(70px*8);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 2px 0 2px 0;
+}
+
+.cell{
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.white{
+  background-color: rgb(244, 233, 219);
+}
+
+.black{
+  background-color: rgb(10, 147, 147);
+}
+
+.cell img{
+  width: 65px;
+  height: 65px;
+  position: relative;
+}
+
+.selected{
+  background-color: rgb(210, 202, 84);
+}
+
+.available{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(105, 104, 104, 0.3);
+}
+
+.attackedCellW{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 10;
+  background-color: rgba(102, 9, 9, 0.538);
+}
+.attackedCellB{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 10;
+  background-color: rgba(31, 9, 102, 0.538);
+}
+
+.statisticBar{
+  position: relative;
+  width: 400px;
+  height: 600px;
+  padding: 20px 10px 20px 20px;
+  background-color: rgb(54, 54, 54);
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.sideabr{
+  position: static;
+  display: flex;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 5px;
+  min-height: 100vh;
+  width: 50px;
+  flex-shrink: 0;
+  background-color: rgb(62, 62, 62);
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.timer.timer_white{
+  position: absolute;
+  bottom: 20px;
+  background-color: #aaa;
+  color: #444;
+  font-size: 2em;
+  font-weight: 600;
+}
+.timer.timer_white.__active{
+  background-color: #fff;
+  color: #000;
+}
+
+.timer.timer_black{
+  position: absolute;
+  top:20px;
+  background-color: #111;
+  color: #bbb;
+  font-size: 2em;
+  font-weight: 600;
+}
+.timer.timer_black.__active{
+  background-color: #000;
+  color: #fff;
+}
+
+.Button{
+  position: absolute;
+  right: 20px;
+  height: 50px;
+  width: 130px;
+  padding: 5px 15px;
+  font-size: 1.2em;
+  border: none;
+  background-color: teal;
+  color: #eee;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 10px rgba(60, 60, 60, 0.4);
+}
